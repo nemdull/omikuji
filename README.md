@@ -1,15 +1,40 @@
-# Omikuji Fortune Teller
+# omikuji（運勢占い）
 
-This is a simple web-based Omikuji (Japanese fortune-telling slip) application. It prompts the user for their name and then displays a random fortune.
+omikuji（運勢占い）は、HTML/CSS/JavaScript（純粋な DOM 操作）で実装された静的な運勢占いアプリです。依存関係はなく、静的リソースだけで完結します。
 
-## Technologies
+## 技術スタック
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- 静的リソース: index.html, style.css, omikuji.js, omikuji.png
+- CI/CD は未使用
 
-- HTML
-- CSS
-- JavaScript
+## 主な機能
+- ユーザー名を取得して表示
+- 乱数ベースで運勢を決定（大吉/中吉/小吉/吉/凶）を表示
+- 表示を適切な要素に反映
 
-## How to Use
+## 設計・実装の工夫
+- 最小構成・依存なし・直感的 UX
+- シンプルな DOM 操作
 
-1. Open `index.html` in your web browser.
-2. Enter your name when prompted.
-3. Your fortune will be displayed on the page.
+## セットアップ & 動作確認
+- index.html を開く
+- 必要に応じて簡易サーバで動作確認
+  - python3 -m http.server 8000
+  - ブラウザで http://localhost:8000
+
+## 改善ポイント / TODO
+- テスト: ユニットテスト未実装
+- エラーハンドリング: 名前入力の検証を強化
+- 設計: ロジック分離・コード分割の検討
+- CI/CD: lint/テストの自動化の追加
+- ドキュメント: 使用上の注意・拡張案
+
+## 強調したいポイント
+- 学習用の分かりやすいサンプル
+- 将来の拡張性を意識した設計
+
+## 貢献・開発ガイド
+- ブランチ運用案: feature/readme
+- PR の流れ: PR を main へ、ブランチは残す
